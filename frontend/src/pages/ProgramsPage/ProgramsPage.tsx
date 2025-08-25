@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { programs } from '@/data/programs';
 import './ProgramsPage.css';
 
@@ -52,10 +51,6 @@ const ProgramsPage: React.FC = () => {
             </div>
           ))}
         </div>
-        
-        <Link to={`/programs/${program.id}`} className="btn btn-primary">
-          Learn More
-        </Link>
       </div>
     </div>
   );

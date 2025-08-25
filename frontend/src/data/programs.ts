@@ -20,7 +20,7 @@ export const programs: Program[] = [
     title: 'Community Nutrition Development Centre',
     category: 'Nutrition Program',
     description: 'Providing nutritious meals and food support to the Kayamandi community to combat food insecurity and promote health.',
-    image: '/images/programs/feeding-scheme.jpg',
+    image: '/feeding.png',
     features: [
       'Daily nutritious meals for children and vulnerable community members',
       'Food parcels for families in need',
@@ -39,7 +39,7 @@ export const programs: Program[] = [
     title: 'Referral Network',
     category: 'Support Services',
     description: 'Connecting community members with essential services through our network of partner organizations.',
-    image: '/images/programs/referral-network.jpg',
+    image: '/support.png',
     features: [
       'Access to healthcare services',
       'Legal aid and counseling referrals',
@@ -58,7 +58,7 @@ export const programs: Program[] = [
     title: 'Trauma Support Center',
     category: 'Crisis Intervention',
     description: 'Safe and supportive environment for victims of abuse and violence, offering immediate assistance and care.',
-    image: '/images/programs/trauma-support.jpg',
+    image: '/crisis.png',
     features: [
       'Child and victim-friendly space',
       'Crisis counseling',
@@ -77,7 +77,7 @@ export const programs: Program[] = [
     title: 'Education & Awareness',
     category: 'Community Workshops',
     description: 'Empowering the community through education on critical social issues and rights awareness.',
-    image: '/images/programs/workshops.jpg',
+    image: '/workshop.png',
     features: [
       'Domestic violence prevention',
       'Child protection programs',
@@ -96,7 +96,7 @@ export const programs: Program[] = [
     title: 'Kayamandi Community Center',
     category: 'Future Initiative',
     description: 'A dedicated space for community development programs, skills training, and social services.',
-    image: '/images/programs/community-center.jpg',
+    image: '/Centre.png',
     features: [
       'Multi-purpose community space',
       'Skills development center',
@@ -116,7 +116,7 @@ export const programs: Program[] = [
     title: 'Empowerment Through Skills',
     category: 'Future Initiative',
     description: 'Vocational training and skills development programs for sustainable livelihoods.',
-    image: '/images/programs/skills-training.jpg',
+    image: '/Skills.png',
     features: [
       'Vocational training programs',
       'Entrepreneurship development',
