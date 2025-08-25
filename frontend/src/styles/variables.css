@@ -1,0 +1,79 @@
+:root {
+  /* Three-Color Theme */
+  --color-green: #A4CD39;     /* Green */
+  --color-magenta: #B9368C;   /* Magenta/Purple */
+  --color-blue: #1BB1E0;      /* Light Blue */
+  
+  /* Primary Color - Magenta */
+  --color-primary: var(--color-magenta);
+  --color-primary-light: #d44ea8;
+  --color-primary-dark: #9b2a78;
+  
+  /* Secondary Color - Blue */
+  --color-secondary: var(--color-blue);
+  --color-secondary-light: #5bc7f1;
+  --color-secondary-dark: #0d8db8;
+  
+  /* Accent Color - Green */
+  --color-accent: var(--color-green);
+  --color-accent-light: #c5e27d;
+  --color-accent-dark: #8cb12d;
+  
+  /* Text Colors */
+  --color-text: #1a1a1a;
+  --color-text-light: #4a4a4a;
+  --color-text-lighter: #777777;
+  --color-text-on-primary: #ffffff;
+  --color-text-on-secondary: #1a1a1a;
+  --color-text-on-accent: #1a1a1a;
+  
+  /* Background Colors */
+  --color-bg: #ffffff;
+  --color-bg-light: #f8f8f8;
+  --color-bg-dark: #f0f0f0;
+  
+  /* Status Colors */
+  --color-success: #2ecc71;
+  --color-warning: #f39c12;
+  --color-error: #e74c3c;
+  --color-info: #3498db;
+  
+  /* Theme Color Variables */
+  --hamburger-pink: var(--color-pink);
+  --hamburger-blue: var(--color-blue);
+  --hamburger-green: var(--color-green);
+  
+  /* Border Colors */
+  --color-border: #e0e0e0;
+  --color-border-light: #f0f0f0;
+  --color-border-dark: #d0d0d0;
+  --color-text-on-secondary: #000000;
+  
+  /* Background Colors */
+  --color-bg: #ffffff;
+  --color-bg-light: #f8f9fa;
+  --color-bg-dark: #212529;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;  /* 4px */
+  --spacing-sm: 0.5rem;   /* 8px */
+  --spacing-md: 1rem;     /* 16px */
+  --spacing-lg: 1.5rem;   /* 24px */
+  --spacing-xl: 2rem;     /* 32px */
+  --spacing-xxl: 3rem;    /* 48px */
+  
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
