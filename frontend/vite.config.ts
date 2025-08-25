@@ -10,6 +10,19 @@ export default defineConfig({
     open: true,
     host: true
   },
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom', 'react-router-dom'],
+          vendor: ['@vitejs/plugin-react']
+        }
+      }
+    }
+  },
   resolve: {
     alias: [
       {
@@ -20,10 +33,14 @@ export default defineConfig({
   },
   optimizeDeps: {
     esbuildOptions: {
-      // Node.js global to browser globalThis
       define: {
         global: 'globalThis',
       },
     },
+    include: ['react', 'react-dom', 'react-router-dom']
   },
+  preview: {
+    port: 3000,
+    strictPort: true,
+  }
 });
