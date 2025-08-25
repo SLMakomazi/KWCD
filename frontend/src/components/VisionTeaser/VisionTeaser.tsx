@@ -1,8 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import './VisionTeaser.css';
 
-const VisionTeaser = () => {
+const VisionTeaser = (): React.JSX.Element => {
   return (
     <div className="vision-teaser">
       <div className="vision-content">

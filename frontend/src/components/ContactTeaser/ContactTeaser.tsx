@@ -1,9 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import { FaPhone, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import './ContactTeaser.css';
 
-const ContactTeaser = () => {
+const ContactTeaser = (): React.JSX.Element => {
   return (
     <div className="contact-teaser">
       <div className="container">
