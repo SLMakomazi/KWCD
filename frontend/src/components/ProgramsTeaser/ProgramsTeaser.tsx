@@ -31,19 +31,19 @@ const ProgramsTeaser = () => {
   ];
 
   return (
-    <section className="section-programs">
-      <div className="container">
-        <div className="programs-teaser">
-          <div className="programs-grid">
+    <section className="programs-teaser-section">
+      <div className="programs-teaser-container">
+        <div className="programs-teaser-wrapper">
+          <div className="programs-teaser-grid">
             {programs.map((program, index) => (
-              <div key={index} className="program-card">
-                <div className="program-icon-container">
+              <div key={index} className="program-teaser-card">
+                <div className="program-teaser-icon">
                   {program.icon}
                 </div>
-                <h3>{program.title}</h3>
-                <p>{program.description}</p>
-                <Link to={program.link} className="learn-more">
-                  Learn More <FaArrowRight className="arrow-icon" />
+                <h3 className="program-teaser-title">{program.title}</h3>
+                <p className="program-teaser-description">{program.description}</p>
+                <Link to={program.link} className="program-teaser-link">
+                  Learn More <FaArrowRight className="program-teaser-arrow" />
                 </Link>
               </div>
             ))}
