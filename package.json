@@ -1,0 +1,22 @@
+{
+  "name": "kwcd-website-root",
+  "private": true,
+  "version": "1.0.0",
+  "description": "KWCD Website - Root package",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm install && npm run build",
+    "preview": "cd frontend && npm run preview",
+    "test": "cd frontend && npm test"
+  },
+  "workspaces": [
+    "frontend"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
