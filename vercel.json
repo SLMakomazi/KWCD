@@ -22,9 +22,16 @@
       "headers": {
         "Cache-Control": "s-maxage=0, stale-while-revalidate"
       }
+    },
+    {
+      "src": "/(.*)\\.(jpg|jpeg|png|gif|ico|svg|css|js|json|html)$",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/index.html"
     }
-  ],
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

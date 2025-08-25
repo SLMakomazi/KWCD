@@ -5,24 +5,22 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  
   server: {
     port: 3000,
     open: true,
     host: true
   },
+  
   build: {
     outDir: 'dist',
+    minify: 'esbuild',
     sourcemap: true,
+    cssMinify: true,
     chunkSizeWarningLimit: 1000,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          react: ['react', 'react-dom', 'react-router-dom'],
-          vendor: ['@vitejs/plugin-react']
-        }
-      }
-    }
+    reportCompressedSize: false,
   },
+  
   resolve: {
     alias: [
       {
@@ -31,16 +29,14 @@ export default defineConfig({
       }
     ]
   },
-  optimizeDeps: {
-    esbuildOptions: {
-      define: {
-        global: 'globalThis',
-      },
-    },
-    include: ['react', 'react-dom', 'react-router-dom']
+  
+  define: {
+    'process.env.NODE_ENV': '"production"',
   },
+  
   preview: {
     port: 3000,
     strictPort: true,
+    open: true
   }
 });

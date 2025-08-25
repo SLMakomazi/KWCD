@@ -5,7 +5,7 @@
   "description": "KWCD Website - Root package",
   "scripts": {
     "dev": "cd frontend && npm run dev",
-    "build": "cd frontend && npm install && npm run build",
+    "build": "npm install && npm run build",
     "preview": "cd frontend && npm run preview",
     "test": "cd frontend && npm test"
   },
