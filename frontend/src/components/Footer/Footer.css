@@ -65,7 +65,7 @@
     var(--color-pink), 
     var(--color-blue), 
     var(--color-green)
-  );
+  )!important;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -1,6 +1,15 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './GalleryPage.css';
+
+type Photo = {
+  id: number;
+  title: string;
+  category: string;
+  image: string;
+  date: string;
+  description: string;
+};
 
 // Sample gallery data - in a real app, this would come from an API
 const galleryData = {
@@ -89,13 +98,25 @@ const galleryData = {
 
 const GalleryPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
-  const [selectedPhoto, setSelectedPhoto] = useState<typeof galleryData.photos[0] | null>(null);
+  const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
+  const [visibleCount, setVisibleCount] = useState(3);
 
   const filteredPhotos = activeCategory === 'all' 
     ? galleryData.photos 
     : galleryData.photos.filter(photo => photo.category === activeCategory);
 
-  const openModal = (photo: typeof galleryData.photos[0]) => {
+  const visiblePhotos = filteredPhotos.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredPhotos.length;
+
+  const loadMore = () => {
+    setVisibleCount(prev => Math.min(prev + 3, filteredPhotos.length));
+  };
+
+  const resetGallery = () => {
+    setVisibleCount(3);
+  };
+
+  const openModal = (photo: Photo) => {
     setSelectedPhoto(photo);
     document.body.style.overflow = 'hidden';
   };
@@ -129,11 +150,6 @@ const GalleryPage = () => {
               </button>
             ))}
           </div>
-          
-          <div className="search-box">
-            <input type="text" placeholder="Search photos..." />
-            <button><i className="fas fa-search"></i></button>
-          </div>
         </div>
       </section>
 
@@ -141,7 +157,7 @@ const GalleryPage = () => {
       <section className="gallery-grid-section">
         <div className="container">
           <div className="gallery-grid">
-            {filteredPhotos.map(photo => (
+            {visiblePhotos.map(photo => (
               <div 
                 key={photo.id} 
                 className="gallery-item"
@@ -158,8 +174,16 @@ const GalleryPage = () => {
             ))}
           </div>
           
-          <div className="load-more">
-            <button className="btn btn-outline">Load More</button>
+          <div className="gallery-actions">
+            {hasMore ? (
+              <button className="btn btn-outline" onClick={loadMore}>
+                Load More
+              </button>
+            ) : visibleCount > 3 && (
+              <button className="btn btn-outline" onClick={resetGallery}>
+                Hide
+              </button>
+            )}
           </div>
         </div>
       </section>
